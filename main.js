@@ -22,17 +22,20 @@ function checkGuess(playerGuess, correctNumber) {
   }
 }
 
+
 function playGame() {
   const correctNumber = generateRandomNumber();
+  let currentPoints = 100
 
   for (let i = 1; i <= 10; i++) {
     const playerGuess = getPlayerGuess();
     const result = checkGuess(playerGuess, correctNumber);
 
     if (result === "Correct!") {
-      alert(`You guessed it in ${i} attempt(s)! Good job!`);
+      alert(`You guessed it in ${i} attempt(s)!, You scored ${currentPoints} points, Good job!`);
       return;
     } else {
+      currentPoints -= 10
       alert(`${result}, you have: ${10 - i} attempts left!`);
     }
   }
