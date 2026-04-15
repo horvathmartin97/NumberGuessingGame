@@ -1,55 +1,29 @@
-Number Guessing Game
-🕹️ Overview
-A fun and simple Number Guessing Game written in pure JavaScript.
-Try to guess the computer’s secret number between 1 and 100 — but be careful, you only have 10 attempts!
+## Live Demo
 
-This project demonstrates basic programming concepts such as:
+[Play the Game](https://horvathmartin97.github.io/NumberGuessingGame/)
 
-Random number generation
+# Number Guessing Game
 
-Conditional logic
+A minimalist number guessing game developed with vanilla JavaScript.
 
-Input validation
+This project focuses on core programming fundamentals such as random number generation, user input handling, validation, and conditional game logic. The user attempts to guess a secret number between 1 and 100, with a maximum of 10 tries.
 
-User interaction via alert, prompt, and confirm
+## Highlights
 
-🧠 How It Works
-The player is greeted and asked if they want to play.
+- Clean and simple game logic
+- Browser-based interaction
+- Input validation and attempt control
+- Beginner-friendly structure with reusable functions
 
-After entering a name, the game picks a random number between 1–100.
+## Tech Stack
 
-The player guesses numbers, and the game gives feedback:
+- HTML
+- JavaScript
 
-🟢 “Correct!” – You win!
+## Purpose
 
-🔺 “Too high!” – Try a smaller number.
+The goal of this project was to strengthen fundamental JavaScript skills through a small interactive browser game.
 
-🔻 “Too low!” – Go higher next time.
+## Local Setup
 
-You have 10 guesses total. If you run out, the correct number is revealed.
-
-🧩 Features
-✅ Input validation for numbers between 1–100
-
-✅ Tracks and displays remaining attempts
-
-✅ Fun, lightweight, and browser-ready
-
-✅ Uses recursive validation and clean function structure
-
-🚀 Run Locally
-To play the game on your browser:
-
-Clone the repository or copy the script.
-
-bash
-git clone https://github.com/yourusername/number-guessing-game.git
-cd number-guessing-game
-Create two files:
-
-index.html
-
-guessing-game.js
-
-Run the Game:
-Just open the index.html file in your favorite browser — no server needed!
+Clone the repository and open the HTML file in your browser. No build tools or dependencies are needed.
