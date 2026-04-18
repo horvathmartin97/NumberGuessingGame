@@ -4,7 +4,18 @@ function generateRandomNumber() {
 }
 
 function getPlayerGuess() {
-  const playerGuess = Number(prompt("Guess a whole number between 1 and 100"));
+
+  const input = prompt("Guess a whole number between 1 and 100");
+  if (input === null){
+    const playerConfimation = confirm("Are you sure you want to quit?");
+    if (playerConfimation === true){
+      return "Game cancelled";
+    }
+    else {
+      return getPlayerGuess();
+    }
+  } 
+  const playerGuess = Number(input);
   if (Number.isInteger(playerGuess) && playerGuess >= 1 && playerGuess <= 100) {
     return playerGuess;
   }
@@ -30,6 +41,10 @@ function playGame() {
   for (let i = 1; i <= 10; i++) {
     const playerGuess = getPlayerGuess();
     const result = checkGuess(playerGuess, correctNumber);
+
+    if (playerGuess === "Game cancelled") {
+      return alert("Game over");
+    }
 
     if (result === "Correct!") {
       alert(`You guessed it in ${i} attempt(s)!, You scored ${currentPoints} points, Good job!`);
